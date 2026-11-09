@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Symbiologic | Transforming complexity into human-centered clarity</title>
+<meta name="description" content="Symbiologic is a Tampa studio for human-centered design, quantum-ready security and responsible AI. We turn complex technology into clear, safe, usable experiences.">
+<meta property="og:title" content="Symbiologic | Transforming complexity into human-centered clarity">
+<meta property="og:description" content="Human-centered design, quantum-ready security and responsible AI from Tampa, Florida.">
+<meta property="og:image" content="assets/clarity.jpg">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0e1f3a; --ocean:#2a6ba8; --ocean-dark:#1f5486; --sky:#8ec3e8; --sky-tint:#e3f0f9;
+  --leaf:#6aae45; --forest:#3d7a2a; --leaf-tint:#e6f2df;
+  --paper:#f7f9f8; --white:#fff; --line:#dfe3e2; --slate:#5b6670; --ink:#3b4652;
+  --radius:20px; --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--navy);background:var(--paper);line-height:1.6;font-size:17px}
+img{max-width:100%;display:block}
+a{color:var(--ocean)}a:hover{color:var(--navy)}
+h1,h2,h3{font-family:Outfit,system-ui,sans-serif;line-height:1.1;margin:0;letter-spacing:-.02em}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--navy);color:#fff;padding:10px 16px;border-radius:8px;z-index:20}
+.skip:focus{left:8px}
+:focus-visible{outline:3px solid var(--ocean);outline-offset:3px;border-radius:6px}
+
+/* Header */
+header{position:sticky;top:0;z-index:10;background:rgba(247,249,248,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy)}
+.brand img{width:40px;height:40px}
+.brand span{font-family:Outfit,system-ui,sans-serif;font-weight:600;font-size:24px;letter-spacing:-.01em}
+.brand b{font-weight:600;color:var(--ocean)}
+.nav ul{list-style:none;display:flex;gap:28px;margin:0;padding:0;flex-wrap:wrap}
+.nav ul a{color:var(--navy);text-decoration:none;font-weight:500;font-size:16px}
+.nav ul a:hover{color:var(--ocean)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:background .2s,color .2s}
+.btn-primary{background:var(--ocean);color:#fff}.btn-primary:hover{background:var(--navy);color:#fff}
+.btn-ghost{background:transparent;color:var(--navy);border:2px solid var(--navy)}.btn-ghost:hover{background:var(--navy);color:#fff}
+
+/* Hero */
+.hero{padding:88px 0 64px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center}
+.eyebrow{font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--forest);margin-bottom:18px}
+.hero h1{font-size:clamp(40px,6vw,72px);font-weight:600}
+.hero h1 span{color:var(--ocean)}
+.hero p.lead{margin-top:24px;font-size:20px;color:var(--ink);max-width:560px}
+.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+.hero-logo{background:#fff;border-radius:32px;padding:32px;box-shadow:0 1px 2px rgba(14,31,58,.05),0 18px 40px rgba(14,31,58,.07)}
+
+/* Clarity band */
+.band{margin:24px 0 0}
+.band img{width:100%;height:clamp(180px,26vw,340px);object-fit:cover}
+.band-caption{display:flex;align-items:center;gap:20px;padding-top:18px;font-size:16px;color:var(--slate)}
+.band-caption strong{color:var(--navy)}
+.band-caption .line{flex:1;height:2px;background:var(--line)}
+.band-caption .clear strong{color:var(--ocean)}
+
+/* Sections */
+section{padding:96px 0}
+.section-head{max-width:760px;margin-bottom:48px}
+.section-head h2{font-size:clamp(32px,4vw,48px);font-weight:600}
+.section-head p{margin-top:16px;font-size:19px;color:var(--ink)}
+
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.card{background:#fff;border-radius:var(--radius);padding:28px;border-top:6px solid var(--ocean);display:flex;flex-direction:column;gap:12px}
+.card:nth-child(2){border-top-color:var(--leaf)}
+.card:nth-child(3){border-top-color:var(--sky)}
+.card:nth-child(4){border-top-color:var(--navy)}
+.card h3{font-size:24px;font-weight:600}
+.card p{color:var(--ink);font-size:16px}
+.card ul{margin:4px 0 0;padding-left:18px;color:var(--ink);font-size:15px}
+.card li{margin:4px 0}
+
+.approach{background:#fff}
+.approach .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.approach img{border-radius:24px;width:100%;height:100%;min-height:360px;object-fit:cover}
+.steps{list-style:none;margin:32px 0 0;padding:0;display:grid;gap:20px}
+.steps li{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start}
+.steps .num{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Outfit,system-ui,sans-serif;font-weight:600;font-size:20px;background:var(--sky-tint);color:var(--navy)}
+.steps li:nth-child(2) .num{background:var(--leaf-tint)}
+.steps h3{font-size:22px;font-weight:600}
+.steps p{color:var(--ink);font-size:16px;margin-top:4px}
+
+.who{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.who div{background:#fff;border-radius:var(--radius);padding:28px;border:1px solid var(--line)}
+.who h3{font-size:22px;font-weight:600;margin-bottom:8px}
+.who p{color:var(--ink);font-size:16px}
+
+.about{background:var(--navy);color:#fff}
+.about .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:center}
+.about img{border-radius:24px;width:100%;min-height:340px;object-fit:cover}
+.about .eyebrow{color:var(--sky)}
+.about h2{font-size:clamp(32px,4vw,46px);font-weight:600}
+.about p{margin-top:18px;color:#d9e4ee;font-size:18px}
+.creds{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;padding:0;list-style:none}
+.creds li{border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:8px 16px;font-size:15px}
+
+.contact{text-align:center}
+.contact h2{font-size:clamp(34px,4.5vw,54px);font-weight:600}
+.contact p{margin:18px auto 0;max-width:620px;font-size:19px;color:var(--ink)}
+.contact .actions{justify-content:center}
+
+footer{border-top:1px solid var(--line);padding:32px 0;font-size:15px;color:var(--slate)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:var(--slate)}
+
+@media (max-width:980px){
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero .wrap,.approach .wrap,.about .wrap{grid-template-columns:1fr}
+  .hero-logo{max-width:320px;margin:0 auto;padding:24px}
+  .who{grid-template-columns:1fr}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .nav ul{gap:18px;width:100%;order:3;padding-bottom:12px}
+  .nav .btn{display:none}
+  .cards{grid-template-columns:1fr}
+  section{padding:72px 0}
+  .hero{padding:56px 0 40px}
+  .band-caption{flex-direction:column;align-items:flex-start;gap:6px}
+  .band-caption .line{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Symbiologic home">
+      <img src="assets/mark.png" alt="" width="40" height="40">
+      <span>Symbio<b>logic</b></span>
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary" href="#contact">Book a free chat</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Human-centered design · Quantum-ready security</p>
+        <h1 id="hero-title">Transforming complexity into <span>human-centered clarity.</span></h1>
+        <p class="lead">Security, AI and quantum technology can feel overwhelming. Symbiologic designs them around the people who use them, so your team understands what to do and feels safe doing it.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#contact">Book a free 30-minute chat</a>
+          <a class="btn btn-ghost" href="#services">See our services</a>
+        </div>
+      </div>
+      <div class="hero-logo">
+        <img src="assets/logo.png" alt="Symbiologic logo: a flowing S made of a green leaf and a blue network, with two circles for people" width="600" height="600">
+      </div>
+    </div>
+  </section>
+
+  <div class="band" aria-label="From complexity to clarity">
+    <img src="assets/clarity.jpg" alt="Tangled circuits and leaves on the left flowing into smooth, bright light on the right" width="1856" height="576">
+    <div class="wrap band-caption">
+      <span><strong>Complexity</strong> · tangled systems, rules and risks</span>
+      <span class="line" aria-hidden="true"></span>
+      <span class="clear"><strong>Clarity</strong> · simple, secure and human</span>
+    </div>
+  </div>
+
+  <section id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Services</p>
+        <h2 id="services-title">Four ways we make technology clear</h2>
+        <p>Every project starts with the people involved: what they need, what worries them and what they can realistically do.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <h3>Human-Centered Design</h3>
+          <p>Make complex tools easy to use and easy to trust.</p>
+          <ul>
+            <li>User interviews and research</li>
+            <li>Accessibility checks against WCAG 2.2</li>
+            <li>Redesigned key screens and flows</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Quantum-Ready Security</h3>
+          <p>Get ready for the day quantum computers can break today's encryption.</p>
+          <ul>
+            <li>Map where your data and encryption live</li>
+            <li>Plan the move to post-quantum standards</li>
+            <li>Plain-language risk reports</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Responsible AI</h3>
+          <p>Use AI with confidence, not guesswork.</p>
+          <ul>
+            <li>A list of the AI tools your team uses</li>
+            <li>Risk review based on the NIST AI framework</li>
+            <li>A simple AI-use policy</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Privacy and HIPAA Care</h3>
+          <p>Protect patient information without the stress.</p>
+          <ul>
+            <li>HIPAA checkups ranked by urgency</li>
+            <li>Policy updates and staff training</li>
+            <li>Ongoing monthly support</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="approach" id="approach" aria-labelledby="approach-title">
+    <div class="wrap">
+      <img src="assets/team.jpg" alt="A designer maps human-centered design and systems thinking on a whiteboard while her team listens" width="1400" height="764">
+      <div>
+        <p class="eyebrow">Our approach</p>
+        <h2 id="approach-title" style="font-size:clamp(32px,4vw,46px);font-weight:600">From tangled to clear in four steps</h2>
+        <ol class="steps">
+          <li><span class="num" aria-hidden="true">1</span><div><h3>Clarify</h3><p>We untangle your systems, rules and risks and put them in plain words.</p></div></li>
+          <li><span class="num" aria-hidden="true">2</span><div><h3>Integrate</h3><p>We fit security, AI and quantum-ready tools into the way your team already works.</p></div></li>
+          <li><span class="num" aria-hidden="true">3</span><div><h3>Connect</h3><p>We design around real people: their goals, their limits and their trust.</p></div></li>
+          <li><span class="num" aria-hidden="true">4</span><div><h3>Insight</h3><p>We use research and data so every choice is one you can explain.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="who-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Who we help</p>
+        <h2 id="who-title">Built for small teams doing important work</h2>
+      </div>
+      <div class="who">
+        <div><h3>Small health practices</h3><p>Dental, therapy, chiropractic and family clinics that need to protect patient information.</p></div>
+        <div><h3>Growing tech teams</h3><p>Startups building AI or quantum products that need to be safe, usable and accessible.</p></div>
+        <div><h3>Mission-driven organizations</h3><p>Nonprofits and community groups that want clear, trustworthy technology on a small budget.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <img src="assets/studio.jpg" alt="A bright, quiet meeting room with clear geometric shapes on a white table" width="1400" height="764">
+      <div>
+        <p class="eyebrow">About the founder</p>
+        <h2 id="about-title">Designer at heart, security expert by training</h2>
+        <p>Symbiologic was founded in Tampa by Anel Henning, who spent more than 17 years as an art and creative director in Manhattan before moving into cybersecurity and compliance. That mix of design and security is the whole idea: technology only protects people when people can understand it.</p>
+        <ul class="creds">
+          <li>MS, Cybersecurity Management</li>
+          <li>BS, Computer Science</li>
+          <li>BFA, Graphic Design (MICA)</li>
+          <li>17+ years in creative direction</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <p class="eyebrow">Let's talk</p>
+      <h2 id="contact-title">Ready to make it clear?</h2>
+      <p>Book a free 30-minute chat. You'll leave with two or three next steps, whether or not you work with us.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/anel-henning-quantum">Message Anel on LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/AnelHenning2-collab">See work on GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Symbiologic · Tampa, Florida</span>
+    <span>Transforming complexity into human-centered clarity.</span>
+  </div>
+</footer>
+</body>
+</html>
