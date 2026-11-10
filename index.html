@@ -25,7 +25,7 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--navy);background:var(--paper);line-height:1.6;font-size:17px}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 a{color:var(--ocean)}a:hover{color:var(--navy)}
 h1,h2,h3{font-family:Outfit,system-ui,sans-serif;line-height:1.1;margin:0;letter-spacing:-.02em}
 p{margin:0}
@@ -62,7 +62,7 @@ header{position:sticky;top:0;z-index:10;background:rgba(248,248,246,.92);backdro
 
 /* Clarity band */
 .band{margin:24px 0 0}
-.band img{width:100%;height:clamp(180px,26vw,340px);object-fit:cover}
+.band img{width:100%;height:auto;min-height:180px;object-fit:cover;object-position:left center}
 .band-caption{display:flex;align-items:center;gap:20px;padding-top:18px;font-size:16px;color:var(--slate)}
 .band-caption strong{color:var(--navy)}
 .band-caption .line{flex:1;height:2px;background:var(--brand-gradient);border-radius:2px}
@@ -180,7 +180,7 @@ footer a{color:var(--slate)}
   </section>
 
   <div class="band" aria-label="From complexity to clarity">
-    <img src="assets/clarity.jpg" alt="Tangled circuits and leaves on the left flowing into smooth, bright light on the right" width="1856" height="576">
+    <img src="assets/network-banner.svg" alt="Scattered teal figures on the left, linked by a network, converge into a single copper path rising to the right" width="1856" height="576">
     <div class="wrap band-caption">
       <span><strong>Complexity</strong> · tangled systems, rules and risks</span>
       <span class="line" aria-hidden="true"></span>
