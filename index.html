@@ -14,9 +14,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#0e1f3a; --ocean:#2a6ba8; --ocean-dark:#1f5486; --sky:#8ec3e8; --sky-tint:#e3f0f9;
-  --leaf:#6aae45; --forest:#3d7a2a; --leaf-tint:#e6f2df;
-  --paper:#f7f9f8; --white:#fff; --line:#dfe3e2; --slate:#5b6670; --ink:#3b4652;
+  /* Colors sampled from assets/logo.png */
+  --navy:#03182e; --ocean:#2f6e96; --ocean-dark:#184972; --sky:#a9d2e3; --sky-tint:#e8f2f7;
+  --leaf:#659158; --forest:#346134; --leaf-light:#99c081; --leaf-tint:#eaf2e5;
+  --paper:#f7f9f9; --white:#fff; --line:#dde3e6; --slate:#55616b; --ink:#2f3d4a;
+  --brand-gradient:linear-gradient(90deg,var(--ocean) 0%,var(--leaf-light) 100%);
+  --text-gradient:linear-gradient(90deg,var(--ocean) 0%,var(--forest) 100%);
   --radius:20px; --max:1180px;
 }
 *{box-sizing:border-box}
@@ -36,21 +39,23 @@ header{position:sticky;top:0;z-index:10;background:rgba(247,249,248,.92);backdro
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy)}
 .brand img{width:40px;height:40px}
-.brand span{font-family:Outfit,system-ui,sans-serif;font-weight:600;font-size:24px;letter-spacing:-.01em}
-.brand b{font-weight:600;color:var(--ocean)}
+.brand span{font-family:Outfit,system-ui,sans-serif;font-weight:500;font-size:25px;letter-spacing:0}
+.brand b{font-weight:500;color:var(--ocean)}
 .nav ul{list-style:none;display:flex;gap:28px;margin:0;padding:0;flex-wrap:wrap}
 .nav ul a{color:var(--navy);text-decoration:none;font-weight:500;font-size:16px}
 .nav ul a:hover{color:var(--ocean)}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:background .2s,color .2s}
-.btn-primary{background:var(--ocean);color:#fff}.btn-primary:hover{background:var(--navy);color:#fff}
+.btn-primary{background:var(--ocean);color:#fff}.btn-primary:hover{background:var(--ocean-dark);color:#fff}
 .btn-ghost{background:transparent;color:var(--navy);border:2px solid var(--navy)}.btn-ghost:hover{background:var(--navy);color:#fff}
 
 /* Hero */
 .hero{padding:88px 0 64px}
 .hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center}
-.eyebrow{font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--forest);margin-bottom:18px}
+.eyebrow{font-size:14px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--forest);margin-bottom:22px}
+.eyebrow::after{content:"";display:block;width:64px;height:2px;margin-top:12px;background:var(--brand-gradient);border-radius:2px}
+.contact .eyebrow::after{margin-left:auto;margin-right:auto}
 .hero h1{font-size:clamp(40px,6vw,72px);font-weight:600}
-.hero h1 span{color:var(--ocean)}
+.hero h1 span{color:var(--ocean);background:var(--text-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .hero p.lead{margin-top:24px;font-size:20px;color:var(--ink);max-width:560px}
 .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
 .hero-logo{background:#fff;border-radius:32px;padding:32px;box-shadow:0 1px 2px rgba(14,31,58,.05),0 18px 40px rgba(14,31,58,.07)}
@@ -60,8 +65,8 @@ header{position:sticky;top:0;z-index:10;background:rgba(247,249,248,.92);backdro
 .band img{width:100%;height:clamp(180px,26vw,340px);object-fit:cover}
 .band-caption{display:flex;align-items:center;gap:20px;padding-top:18px;font-size:16px;color:var(--slate)}
 .band-caption strong{color:var(--navy)}
-.band-caption .line{flex:1;height:2px;background:var(--line)}
-.band-caption .clear strong{color:var(--ocean)}
+.band-caption .line{flex:1;height:2px;background:var(--brand-gradient);border-radius:2px}
+.band-caption .clear strong{color:var(--forest)}
 
 /* Sections */
 section{padding:96px 0}
@@ -73,7 +78,7 @@ section{padding:96px 0}
 .card{background:#fff;border-radius:var(--radius);padding:28px;border-top:6px solid var(--ocean);display:flex;flex-direction:column;gap:12px}
 .card:nth-child(2){border-top-color:var(--leaf)}
 .card:nth-child(3){border-top-color:var(--sky)}
-.card:nth-child(4){border-top-color:var(--navy)}
+.card:nth-child(4){border-top-color:var(--forest)}
 .card h3{font-size:24px;font-weight:600}
 .card p{color:var(--ink);font-size:16px}
 .card ul{margin:4px 0 0;padding-left:18px;color:var(--ink);font-size:15px}
@@ -85,7 +90,8 @@ section{padding:96px 0}
 .steps{list-style:none;margin:32px 0 0;padding:0;display:grid;gap:20px}
 .steps li{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start}
 .steps .num{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Outfit,system-ui,sans-serif;font-weight:600;font-size:20px;background:var(--sky-tint);color:var(--navy)}
-.steps li:nth-child(2) .num{background:var(--leaf-tint)}
+.steps li:nth-child(even) .num{background:var(--leaf-tint);color:var(--forest)}
+.steps li:nth-child(odd) .num{color:var(--ocean-dark)}
 .steps h3{font-size:22px;font-weight:600}
 .steps p{color:var(--ink);font-size:16px;margin-top:4px}
 
@@ -94,7 +100,8 @@ section{padding:96px 0}
 .who h3{font-size:22px;font-weight:600;margin-bottom:8px}
 .who p{color:var(--ink);font-size:16px}
 
-.about{background:var(--navy);color:#fff}
+.about{background:linear-gradient(135deg,var(--navy) 0%,#0a2c4d 100%);color:#fff}
+.about .eyebrow::after{background:linear-gradient(90deg,var(--sky),var(--leaf-light))}
 .about .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:center}
 .about img{border-radius:24px;width:100%;min-height:340px;object-fit:cover}
 .about .eyebrow{color:var(--sky)}
@@ -108,8 +115,10 @@ section{padding:96px 0}
 .contact p{margin:18px auto 0;max-width:620px;font-size:19px;color:var(--ink)}
 .contact .actions{justify-content:center}
 
-footer{border-top:1px solid var(--line);padding:32px 0;font-size:15px;color:var(--slate)}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer{position:relative;padding:32px 0;font-size:15px;color:var(--slate)}
+footer::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--brand-gradient)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+footer .tagline{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--navy)}
 footer a{color:var(--slate)}
 
 @media (max-width:980px){
@@ -290,7 +299,7 @@ footer a{color:var(--slate)}
 <footer>
   <div class="wrap">
     <span>© 2026 Symbiologic · Tampa, Florida</span>
-    <span>Transforming complexity into human-centered clarity.</span>
+    <span class="tagline">Transforming complexity into human-centered clarity</span>
   </div>
 </footer>
 </body>
