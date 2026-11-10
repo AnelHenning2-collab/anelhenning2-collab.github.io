@@ -11,15 +11,15 @@
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Montserrat:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   /* Colors sampled from assets/logo.png */
-  --navy:#03182e; --ocean:#2f6e96; --ocean-dark:#184972; --sky:#a9d2e3; --sky-tint:#e8f2f7;
-  --leaf:#659158; --forest:#346134; --leaf-light:#99c081; --leaf-tint:#eaf2e5;
-  --paper:#f7f9f9; --white:#fff; --line:#dde3e6; --slate:#55616b; --ink:#2f3d4a;
+  --navy:#0f2c36; --ocean:#205e76; --ocean-dark:#174e5d; --sky:#9cc3cf; --sky-tint:#e7f0f2;
+  --leaf:#c38e5c; --forest:#7c5d3c; --leaf-light:#e1a366; --leaf-tint:#f7ece1;
+  --paper:#f8f8f6; --white:#fff; --line:#e2e2dc; --slate:#5a6266; --ink:#2e3b40;
   --brand-gradient:linear-gradient(90deg,var(--ocean) 0%,var(--leaf-light) 100%);
-  --text-gradient:linear-gradient(90deg,var(--ocean) 0%,var(--forest) 100%);
+  --text-gradient:linear-gradient(90deg,var(--ocean) 0%,#a8703f 100%);
   --radius:20px; --max:1180px;
 }
 *{box-sizing:border-box}
@@ -35,12 +35,12 @@ p{margin:0}
 :focus-visible{outline:3px solid var(--ocean);outline-offset:3px;border-radius:6px}
 
 /* Header */
-header{position:sticky;top:0;z-index:10;background:rgba(247,249,248,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header{position:sticky;top:0;z-index:10;background:rgba(248,248,246,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy)}
 .brand img{width:40px;height:40px}
-.brand span{font-family:Outfit,system-ui,sans-serif;font-weight:500;font-size:25px;letter-spacing:0}
-.brand b{font-weight:500;color:var(--ocean)}
+.brand span{font-family:Montserrat,system-ui,sans-serif;font-weight:600;font-size:20px;letter-spacing:.1em;text-transform:uppercase;color:var(--forest)}
+.brand b{font-weight:inherit;color:inherit}
 .nav ul{list-style:none;display:flex;gap:28px;margin:0;padding:0;flex-wrap:wrap}
 .nav ul a{color:var(--navy);text-decoration:none;font-weight:500;font-size:16px}
 .nav ul a:hover{color:var(--ocean)}
@@ -58,7 +58,7 @@ header{position:sticky;top:0;z-index:10;background:rgba(247,249,248,.92);backdro
 .hero h1 span{color:var(--ocean);background:var(--text-gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .hero p.lead{margin-top:24px;font-size:20px;color:var(--ink);max-width:560px}
 .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
-.hero-logo{background:#fff;border-radius:32px;padding:32px;box-shadow:0 1px 2px rgba(14,31,58,.05),0 18px 40px rgba(14,31,58,.07)}
+.hero-logo{background:#fff;border-radius:32px;padding:32px;box-shadow:0 1px 2px rgba(15,44,54,.05),0 18px 40px rgba(15,44,54,.07)}
 
 /* Clarity band */
 .band{margin:24px 0 0}
@@ -100,13 +100,13 @@ section{padding:96px 0}
 .who h3{font-size:22px;font-weight:600;margin-bottom:8px}
 .who p{color:var(--ink);font-size:16px}
 
-.about{background:linear-gradient(135deg,var(--navy) 0%,#0a2c4d 100%);color:#fff}
+.about{background:linear-gradient(135deg,var(--navy) 0%,#174e5d 100%);color:#fff}
 .about .eyebrow::after{background:linear-gradient(90deg,var(--sky),var(--leaf-light))}
 .about .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:center}
 .about img{border-radius:24px;width:100%;min-height:340px;object-fit:cover}
 .about .eyebrow{color:var(--sky)}
 .about h2{font-size:clamp(32px,4vw,46px);font-weight:600}
-.about p{margin-top:18px;color:#d9e4ee;font-size:18px}
+.about p{margin-top:18px;color:#dde9ec;font-size:18px}
 .creds{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;padding:0;list-style:none}
 .creds li{border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:8px 16px;font-size:15px}
 
@@ -174,7 +174,7 @@ footer a{color:var(--slate)}
         </div>
       </div>
       <div class="hero-logo">
-        <img src="assets/logo.png" alt="Symbiologic logo: a flowing S made of a green leaf and a blue network, with two circles for people" width="600" height="600">
+        <img src="assets/logo.png" alt="Symbiologic logo: a flowing S shaped like a person, fading from teal to copper inside a rounded square" width="600" height="600">
       </div>
     </div>
   </section>
